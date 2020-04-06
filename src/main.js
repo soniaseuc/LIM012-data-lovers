@@ -54,11 +54,13 @@ orderZa.addEventListener('click', () => {
 
 // FILTRAR DATA Y CALCULAR PROMEDIO
 
+
 // ASESINOS
 const assassin = document.getElementById('assassin');
 assassin.addEventListener('click', () => {
   container.innerHTML = '';
   pElement.innerHTML = '';
+  pElement.innerHTML = `Assassin Average Offensive Statistic : ${averageData(arrObject, 'Assassin').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
   createTemplate(filterData(arrObject, 'Assassin'));
@@ -71,6 +73,7 @@ const fighter = document.getElementById('fighter');
 fighter.addEventListener('click', () => {
   container.innerHTML = '';
   pElement.innerHTML = '';
+  pElement.innerHTML = `Fighter Average Offensive Statistic : ${averageData(arrObject, 'Fighter').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
   createTemplate(filterData(arrObject, 'Fighter'));
@@ -83,6 +86,7 @@ const mage = document.getElementById('mage');
 mage.addEventListener('click', () => {
   container.innerHTML = '';
   pElement.innerHTML = '';
+  pElement.innerHTML = `Mage Average Offensive Statistic : ${averageData(arrObject, 'Mage').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
   createTemplate(filterData(arrObject, 'Mage'));
@@ -95,6 +99,7 @@ const marksman = document.getElementById('marksman');
 marksman.addEventListener('click', () => {
   container.innerHTML = '';
   pElement.innerHTML = '';
+  pElement.innerHTML = `Marksman Average Offensive Statistic : ${averageData(arrObject, 'Marksman').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
   createTemplate(filterData(arrObject, 'Marksman'));
@@ -107,6 +112,7 @@ const support = document.getElementById('support');
 support.addEventListener('click', () => {
   container.innerHTML = '';
   pElement.innerHTML = '';
+  pElement.innerHTML = `Support Average Offensive Statistic : ${averageData(arrObject, 'Support').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
   createTemplate(filterData(arrObject, 'Support'));
@@ -119,6 +125,7 @@ const tank = document.getElementById('tank');
 tank.addEventListener('click', () => {
   container.innerHTML = '';
   pElement.innerHTML = '';
+  pElement.innerHTML = `Tank Average Offensive Statistic : ${averageData(arrObject, 'Tank').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
   createTemplate(filterData(arrObject, 'Tank'));
