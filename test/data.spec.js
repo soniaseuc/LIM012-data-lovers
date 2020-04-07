@@ -70,7 +70,6 @@ const filterMage = [
 
 const DataAverage = [
   {
-    name: 'Aatrox',
     tags: ['Fighter', 'Tank'],
     stats: {
       attackdamage: 58.376,
@@ -80,8 +79,7 @@ const DataAverage = [
     },
   },
   {
-    name: 'Aatrox',
-    tags: ['Fighter', 'Tank'],
+    tags: ['Support', 'Fighter'],
     stats: {
       attackdamage: 53.04,
       attackspeedoffset: -0.065,
@@ -90,7 +88,6 @@ const DataAverage = [
     },
   },
   {
-    name: 'Zyra',
     tags: ['Mage', 'Support'],
     stats: {
       attackdamage: 61.1116,
@@ -100,7 +97,6 @@ const DataAverage = [
     },
   },
   {
-    name: 'Diana',
     tags: ['Fighter', 'Mage'],
     stats: {
       attackdamage: 53.384,
@@ -113,7 +109,7 @@ const DataAverage = [
 
 const AverageOffensiveStatisticFighter = 78.50633333333333;
 // 58.376 +(-0.1) + 26.38 = 84.656 / 3 = 28.2186667
-// 53.04 +(- 0.065) + 20.88 = 73.855 / 3 = 24.6183333
+// 53.04 +(-0.065) + 20.88 = 73.855 / 3 = 24.6183333
 // 53.384 + 0.08 + 23.544 = 77.008 / 3 = 25.6693333
 // 28.2186667 + 24.6183333 + 25.6693333 = 78.50633333333333
 // 84.656 + 73.855 + 77.008 = 235.519 / 3 = 78.50633333333333

@@ -35,7 +35,9 @@ createTemplate(arrObject);
 
 // CREATE UN ELEMENTO P PARA MOSTRAR EL PROMEDIO
 const pElement = document.createElement('p');
-pElement.classList.add('class-new');
+pElement.className = 'class-new';
+
+// document.getElementById("myDIV").className = "mystyle";
 
 // ORDER DATA
 const orderAz = document.getElementById('orderAz');

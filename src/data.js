@@ -9,10 +9,10 @@ export const sortData = (data, sortBy, sortOrder) => {
   const newArray = data;
   if (sortBy === 'name' && sortOrder === 'ascending') {
     newArray.sort((a, b) => {
-      if (a.name > b.name) {
+      if (a.name > b.name) { // si el primer valor es superior al segundo devuelve un valor positivo
         return 1;
       }
-      if (a.name < b.name) {
+      if (a.name < b.name) { // devuelve un valor negativo (-1) si el 1er valor es inferior al 2do
         return -1;
       }
       return 0;
