@@ -222,6 +222,31 @@ div:hover{
   text-shadow: 0px 3px 2.3px rgba(255, 255, 255, 0.548),0px -1px 1px rgb(0, 0, 0);
 }
 
+/*estilo a la estadistica ofensiva de cada campeon*/
+.class-avg{
+  font-size: 1.1em;
+  font-family: 'Acme', sans-serif;/*lo menciono para que aqui se utilize la fuente*/
+  
+  text-align: center;
+  /*background-color: rgb(6, 28, 37);*/
+  margin-top: -0.2em;/*15*/
+  padding: 0.10em;
+  text-transform: capitalize;
+  color: var(--color-white);
+  padding: 6% 8%;
+  padding-top: 2%;
+  padding-right: 8%;
+  padding-bottom: 2%;
+  padding-left: 8%;
+}
+
+/*estilo de hover sobre el promedio para cada campeon*/
+.class-avg:hover{
+  transform: scale(0.96);
+  color: var(--color-black);
+  /*background:rgba(243, 168, 5, 0.842);*/
+}
+
 /*ESTILO DEL FOOTER*/
 footer{
   margin-top: 12px;
@@ -254,6 +279,28 @@ footer{
   font-size: 1em;   
   margin-top: -0.2em;
   padding: 0.76em;
+}
+
+/* BOTON DE SCROLL DOWN*/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+/* HOVER DEL BOTON DE SCROLL DOWN*/
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 /*BARRA LATERAL DE LA PAGINA*/

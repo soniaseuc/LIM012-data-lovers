@@ -163,9 +163,9 @@ YO COMO: jugador de LOL, QUIERO: conocer la estadística ofensiva de los campeon
 - [X] Manipular objects (key | value).
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
-- [ ] Entender la diferencia entre expression y statements.
+- [X] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (`parámetros` | `argumentos` | `valor de retorno`).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [X] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [X] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)

@@ -5,7 +5,7 @@
 
 import data from './data/lol/lol.js';
 import {
-  sortData, filterData, averageData,
+  sortData, filterData, averageData, averageName,
 } from './data.js';
 
 const allChampion = data.data;
@@ -56,6 +56,31 @@ orderZa.addEventListener('click', () => {
 
 // FILTRAR DATA Y CALCULAR PROMEDIO
 
+const showFilter = (arr) => {
+  arr.forEach((champion) => {
+    const newElement = document.createElement('div');
+    const img = document.createElement('img');
+    const p = document.createElement('h3');
+    const pTags = document.createElement('p');
+    const pAvg = document.createElement('p');
+    newElement.classList.add('class-div');
+    p.classList.add('class-name');
+    pTags.classList.add('class-avg');
+    img.classList.add('class-img');
+    pAvg.classList.add('class-avg');
+    p.innerHTML = `${champion.name}`;
+    img.src = `${champion.splash}`;
+    pTags.innerHTML = `Role : ${(champion.tags).join(' , ')}`;
+    pAvg.innerHTML = `Average Offensive Statistic : ${averageName(arrObject, `${champion.name}`).toFixed(2)}`;
+    newElement.appendChild(img);
+    newElement.appendChild(p);
+    newElement.appendChild(pTags);
+    newElement.appendChild(pAvg);
+    container.appendChild(newElement);
+  });
+};
+showFilter(arrObject);
+
 
 // ASESINOS
 const assassin = document.getElementById('assassin');
@@ -65,7 +90,7 @@ assassin.addEventListener('click', () => {
   pElement.innerHTML = `Assassin Average Offensive Statistic : ${averageData(arrObject, 'Assassin').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
-  createTemplate(filterData(arrObject, 'Assassin'));
+  showFilter(filterData(arrObject, 'Assassin'));
 });
 
 
@@ -78,7 +103,7 @@ fighter.addEventListener('click', () => {
   pElement.innerHTML = `Fighter Average Offensive Statistic : ${averageData(arrObject, 'Fighter').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
-  createTemplate(filterData(arrObject, 'Fighter'));
+  showFilter(filterData(arrObject, 'Fighter'));
 });
 
 
@@ -91,7 +116,7 @@ mage.addEventListener('click', () => {
   pElement.innerHTML = `Mage Average Offensive Statistic : ${averageData(arrObject, 'Mage').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
-  createTemplate(filterData(arrObject, 'Mage'));
+  showFilter(filterData(arrObject, 'Mage'));
 });
 
 
@@ -104,7 +129,7 @@ marksman.addEventListener('click', () => {
   pElement.innerHTML = `Marksman Average Offensive Statistic : ${averageData(arrObject, 'Marksman').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
-  createTemplate(filterData(arrObject, 'Marksman'));
+  showFilter(filterData(arrObject, 'Marksman'));
 });
 
 
@@ -117,7 +142,7 @@ support.addEventListener('click', () => {
   pElement.innerHTML = `Support Average Offensive Statistic : ${averageData(arrObject, 'Support').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
-  createTemplate(filterData(arrObject, 'Support'));
+  showFilter(filterData(arrObject, 'Support'));
 });
 
 
@@ -130,7 +155,7 @@ tank.addEventListener('click', () => {
   pElement.innerHTML = `Tank Average Offensive Statistic : ${averageData(arrObject, 'Tank').toFixed(2)}`;
   const average = document.getElementById('average');
   average.appendChild(pElement);
-  createTemplate(filterData(arrObject, 'Tank'));
+  showFilter(filterData(arrObject, 'Tank'));
 });
 
 // AGREGAR O ELIMINAR CLASE A <LI>,ACTIVAR AL HACER CLICK
@@ -143,3 +168,26 @@ li.forEach((el) => {
     el.classList.add('active');
   });
 });
+
+// NO FUNCIONA BOTON DE SCROLL UP
+// When the user clicks on the button, scroll to the top of the document
+const topFunction = () => {
+  document.documentElement.scrollTop = 0;
+};
+
+// Get the button:
+const mybutton = document.getElementById('myBtn');
+mybutton.addEventListener('click', () => {
+  topFunction();
+});
+
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = 'block';
+  } else {
+    mybutton.style.display = 'none';
+  }
+};
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = () => scrollFunction();
